@@ -29,6 +29,9 @@ importers:
       '@types/jsonwebtoken':
         specifier: ^9.0.7
         version: 9.0.7
+      '@types/websocket':
+        specifier: ^1.0.10
+        version: 1.0.10
       bcrypt:
         specifier: ^5.1.1
         version: 5.1.1
@@ -97,6 +100,9 @@ importers:
 
   apps/ws-backend:
     dependencies:
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@types/jsonwebtoken':
         specifier: ^9.0.7
         version: 9.0.7
@@ -119,6 +125,9 @@ importers:
       '@types/ws':
         specifier: ^8.5.13
         version: 8.5.13
+      esbuild:
+        specifier: 0.24.2
+        version: 0.24.2
 
   packages/backend-common:
     devDependencies:
@@ -763,6 +772,9 @@ packages:
 
   '@types/tinycolor2@1.4.6':
     resolution: {integrity: sha512-iEN8J0BoMnsWBqjVbWH/c0G0Hh7O21lpR2/+PrvAVgWdzL7eexIFm4JN/Wn10PTcmNdtS6U67r499mlWMXOxNw==}
+
+  '@types/websocket@1.0.10':
+    resolution: {integrity: sha512-svjGZvPB7EzuYS94cI7a+qhwgGU1y89wUgjT6E2wVUfmAGIvRfT7obBvRtnhXCSsoMdlG4gBFGE7MfkIXZLoww==}
 
   '@types/ws@8.5.13':
     resolution: {integrity: sha512-osM/gWBTPKgHV8XkTunnegTRIsvF6owmf5w+JtAfOw472dptdm0dlGv4xCt6GwQRcC2XVOvvRE/0bAoQcL2QkA==}
@@ -3181,6 +3193,10 @@ snapshots:
       '@types/node': 20.17.6
 
   '@types/tinycolor2@1.4.6': {}
+
+  '@types/websocket@1.0.10':
+    dependencies:
+      '@types/node': 20.17.6
 
   '@types/ws@8.5.13':
     dependencies:
